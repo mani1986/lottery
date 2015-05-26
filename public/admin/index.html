@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lottery</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jumbotron">
+                    <h1>Lottery Admin!</h1>
+                    <p>You can now draw a winner for the lottery. The winner will be notified by email that he as won and another round of the lottery will start automatically.</p>
+                    <button id="buttonDraw" class="btn btn-primary btn-lg" role="button">Draw Winner</button>
+                </div>
+
+                <div id="error"></div>
+                <div id="message"></div>
+             </div>
+        </div>
+</section>
+
+<script type="text/template" id="template-winner-confirmed">
+    The lottery has been drawn. The winner is <%= name %>.
+    </br>
+    The winner will be notified by email.
+</script>
+
+<script type="text/template" id="template-error">
+    <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        <%= message %>
+    </div>
+</script>
+
+<script type="text/template" id="template-message">
+    <div class="alert alert-success" role="alert">
+        <a href="#" class="alert-link"><%= message %></a>
+    </div>
+</script>
+
+<!-- Libraries -->
+<script src="../assets/lib/jquery-min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="../assets/lib/underscore-min.js"></script>
+<script src="../assets/lib/backbone-min.js"></script>
+
+<!-- Models -->
+<script src="../assets/js/model/draw.js"></script>
+
+<!-- Views -->
+<script src="../assets/js/view/error.js"></script>
+<script src="../assets/js/view/message.js"></script>
+<script src="../assets/js/view/lottery.js"></script>
+
+<!-- Main app -->
+<script src="../assets/js/view/admin.js"></script>
+</body>
+</html>

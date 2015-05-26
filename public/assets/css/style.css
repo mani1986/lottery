@@ -1,0 +1,17 @@
+body {
+    margin-top: 50px;
+}
+
+#register {
+    display: none;
+}
+
+#error {
+    margin-top: 10px;
+    display: none;
+}
+
+#message {
+    margin-top: 10px;
+    display: none;
+}

@@ -1,0 +1,20 @@
+{
+    "name": "mani/lottery",
+    "description": "Lottery project for bynder",
+    "authors": [
+        {
+            "name": "Mani Gudvardarson",
+            "email": "mani@tji.li"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "mani\\lottery\\": "src/"
+        }
+    },
+    "require": {
+        "doctrine/orm": "^2.5",
+        "slim/slim": "^2.6",
+        "slim/extras": "^2.0"
+    }
+}
